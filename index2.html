@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Palindrome Checker</title>
+	<link rel="stylesheet" href="mystyle.css">
+	<style> 
+		body {background-color: lightpink;
+		}
+</style>
+
+</head>
+<body>
+	<a href="home.html">Home</a>
+	<p>Enter the word here:
+	<input type="text" name="word1" id="word"></p>
+	<p><button onclick="checkPalindrome(document.getElementById('word').value)">check</button></p>
+	
+	<p id="palindromeCheck"></p>
+	
+<script>
+	function checkPalindrome(word){
+	var word2 = word.split("").reverse().join("");
+
+
+	if (word == word2) {
+		document.getElementById('palindromeCheck').innerHTML = 'It is a palindrome.';
+	} else {
+		document.getElementById('palindromeCheck').innerHTML = 'It is not a palindrome.';
+	};
+};
+</script>
+</body>
+</html>
